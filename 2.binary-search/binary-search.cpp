@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-//Binary search
+//Binary search implementation
 
 int binarySearch(int arr[], int n, int x){
 
