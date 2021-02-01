@@ -92,7 +92,7 @@ int main(){
      printf("\n");
      printf("Inorder traversal:\n");
      inOrder(root);
-       printf("\n");
+     printf("\n");
      printf("Postorder traversal:\n");
      postOrder(root);
      return 0;
