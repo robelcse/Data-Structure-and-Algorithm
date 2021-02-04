@@ -1,4 +1,4 @@
-// Quick sort in C++
+// Quick sort implementation in C++
 
 #include <iostream>
 using namespace std;
