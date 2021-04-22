@@ -19,6 +19,7 @@ bool isPrime(int n) {
   return marked[n] == false;
 }
 
+//this is main function
 int main(){
 
    int n = 30;
