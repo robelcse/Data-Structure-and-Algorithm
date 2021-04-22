@@ -14,6 +14,8 @@ void sieve(int n) {
 
 }
 
+
+//this function will chekc if its boolean or not
 bool isPrime(int n) {
   if (n < 2) return false;
   return marked[n] == false;
