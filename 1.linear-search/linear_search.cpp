@@ -2,7 +2,7 @@
 using namespace std;
 
 /*
- Linear search
+ Linear search algorithm
 */
 
 int main(){
