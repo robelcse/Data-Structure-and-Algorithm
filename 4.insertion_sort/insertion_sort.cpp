@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//implementation of insertion sort algorithm
+
 /* Function to sort an array using insertion sort*/
 void insertionSort(int arr[], int n)
 {
