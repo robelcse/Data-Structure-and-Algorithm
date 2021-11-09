@@ -1,41 +1,45 @@
-#include <iostream>
-#include <stdio.h>
+#include<iostream>
+#include<stdio.h>
 
 using namespace std;
 
-void bubbleSort(int arr[], int n)
-{
+//functoin for sort array
+void selectionSort(int arr[], int n){
+   
+     for(int i = 0; i < n; i++){
+        int min = i;
+        for(int j = i+1; j < n; j++){
+             if(arr[j]<arr[min]){
+                 min = j;
+             }
 
-    for (int i = 0; i < n; i++)
-    {
+             if(min != i){
 
-        for (int j = 0; j < n - 1 - i; j++)
-        {
-
-            if (arr[j] > arr[j + 1])
-            {
-
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
+                 int temp = arr[i];
+                 arr[i] = arr[min];
+                 arr[min] = temp;
+             }
         }
-    }
+     }
 }
 
-int main()
+/* Function to print an array */
+void printArray(int arr[], int size)
 {
+	int i;
+	for (i=0; i < size; i++)
+		cout << arr[i] << " ";
+	cout << endl;
+}
+int main(){
 
-    int arr[] = {22, 14, 12, 18, 9};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    cout << "Before sorting array:" << endl;
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-    cout << endl;
-    bubbleSort(arr, n);
-    cout << "after strting arr:" << endl;
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-    cout << endl;
+
+    int arr[] = {9, 13, 15, 11, 2};
+	int n = sizeof(arr)/sizeof(arr[0]);
+	cout << "Unsorted array: \n";
+	printArray(arr, n);
+    selectionSort(arr, n);
+	cout << "Sorted array: \n";
+	printArray(arr, n);
     return 0;
 }
