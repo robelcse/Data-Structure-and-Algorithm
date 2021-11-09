@@ -3,38 +3,39 @@
 
 using namespace std;
 
-//Binary Search
-
-int binarySearch(int arr[], int n, int x)
+void bubbleSort(int arr[], int n)
 {
 
-    int left = 0;
-    int right = n - 1;
-
-    while (left <= right)
+    for (int i = 0; i < n; i++)
     {
-        int mid = (left + right) / 2;
-        if (arr[mid] == x)
-            return mid;
-        else if (arr[mid] < x)
-            left = mid + 1;
-        else
-            right = mid - 1;
-    }
 
-    return -1;
+        for (int j = 0; j < n - 1 - i; j++)
+        {
+
+            if (arr[j] > arr[j + 1])
+            {
+
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
 }
 
 int main()
 {
 
-    int arr[] = {2, 3, 4, 10, 40};
+    int arr[] = {22, 14, 12, 18, 9};
     int n = sizeof(arr) / sizeof(arr[0]);
-    int x = 40;
-    int result = binarySearch(arr, n, x);
-    if (result == -1)
-        cout << "data not found!";
-    else
-        cout<<"Data is present in = "<<result<<" number index."<<endl;
+    cout << "Before sorting array:" << endl;
+    for (int i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+    bubbleSort(arr, n);
+    cout << "after strting arr:" << endl;
+    for (int i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << endl;
     return 0;
 }
