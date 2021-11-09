@@ -1,37 +1,45 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 /*
- Linear search algorithm
+  Linear search algorithm
 */
+void linearSearch(int arr[], int number)
+{
 
-int main(){
+     bool found = true;
+     for (int i = 0; i < 6; i++)
+     {
 
-  int n,  i, s_data;
-  bool found = true;
+          if (arr[i] == number)
+          {
 
-  cout<<"Please enter the size of array:"<<endl;
-  cin>>n;
-  int arr[n];
-  cout<<"Please enter the elements of array:"<<endl;
-  for(i = 0; i < n ; i++){
-       cin>>arr[i];
-  }
+               printf("data found:%d\n", i);
+               found = false;
+          }
+     }
 
-  cout<<"please enter the data which you want to search:"<<endl;
-  cin>>s_data;
+     if (found)
+     {
 
- for(i = 0; i < n ; i++){
-        if(arr[i] == s_data){
-              cout<<"the index is : "<<i<<" "<<"and data is :"<<arr[i]<<endl;
-              found = false;
-              break;
-        }
-  }
+          printf("data not found!");
+     }
+}
 
-  if(found){
-       cout<<"Data not found!";
-  }
+int main()
+{
 
-  return 0;
+     int arr[5];
+     int number;
+     cout << "Please enter 6 elements of array:" << endl;
+     for (int i = 0; i < 6; i++)
+     {
+          cin >> arr[i];
+     }
+     cout << "Please enter an element to search:" << endl;
+     cin >> number;
+
+     linearSearch(arr, number);
+
+     return 0;
 }
