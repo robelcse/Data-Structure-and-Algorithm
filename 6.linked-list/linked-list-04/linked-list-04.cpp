@@ -37,7 +37,7 @@ void deleteNode(int position){
    }else{
        struct Node *temp1;
        temp1 = head;
-       for(int i = 0; i <= position-2; i++){
+       for(int i = 1; i <= position-2; i++){
              temp1 = temp1->link;
        }
        struct Node *temp2;
