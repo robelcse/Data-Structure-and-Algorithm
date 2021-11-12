@@ -62,4 +62,6 @@ int main() {
   traverseInOrder(root);
   cout << "\nPostorder traversal: ";
   traversePostOrder(root);
+
+  return 0;
 }
