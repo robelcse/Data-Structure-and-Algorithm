@@ -7,6 +7,7 @@ using namespace std;
 #define WHITE 1
 #define GRAY 2
 #define BLACK 3
+#define INT_MIN -2147483648
 
 int adj[100][100];
 int color[100];
@@ -36,6 +37,8 @@ void bfs(int startingNode){
           for(int i = 0; i < node; i++){
                 if(adj[x][i] == 1){
                       if(color[i] == WHITE){
+                            //x er neighbor hosse i
+                            // x number node ta hosse i number node er parent
                             dis[i] = dis[x]+1;
                             parent[i] = x;
                             q.push(i);
@@ -62,6 +65,7 @@ int main(){
    bfs(0);
    printf("\n %d ",parent[5]);
    printf("\n %d ",parent[6]);
+   printf("\n");
 
    return 0;
 }//end main function
